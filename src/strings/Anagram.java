@@ -5,10 +5,11 @@ import java.util.Arrays;
 
 public class Anagram {
     public static void main(String[] args) {
-        String str1 = "hello";
+        String str1 = "listen";
         String str2 = "silent";
 
         System.out.println(checkIfAnagram(str1, str2));
+        System.out.println(checkIfAnagram2(str1, str2));
 
     }
 
@@ -26,5 +27,25 @@ public class Anagram {
 
         // TS : O(nlogn)
     }
+
+    //Efficient Solution
+    public static Boolean checkIfAnagram2(String str1, String str2) {
+        final int SIZE = 256;
+
+        int frequencyCount[] = new int[SIZE];
+        for (int i = 0; i < str1.length(); i++) {
+            frequencyCount[str1.charAt(i)]++;
+            frequencyCount[str2.charAt(i)]--;
+        }
+
+        for (int j : frequencyCount) {
+            if (j != 0) return false;
+        }
+
+        return true;
+
+        // TC : O(n)
+    }
+
 
 }
