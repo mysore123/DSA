@@ -1,7 +1,6 @@
 package arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ReverseInGroups {
     public static void main(String[] args) {
@@ -24,7 +23,7 @@ public class ReverseInGroups {
         }
     }
 
-    private static void reverse(ArrayList<Integer> arr, int start, int end) {
+    public static void reverse(ArrayList<Integer> arr, int start, int end) {
         // reverse an array
         int j = end;
         int i = start;
