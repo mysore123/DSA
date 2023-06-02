@@ -58,4 +58,18 @@ public class LinkedListOperations {
         //return pointer to new head
     }
 
+    public static int size(ListNode head) {
+        ListNode temp = head;
+        if (temp == null) return 0;
+        else if (temp.next == null) return 1;
+        else {
+            int count = 0;
+            while (temp != null) {
+                temp = temp.next;
+                count++;
+            }
+            return count;
+        }
+    }
+
 }
