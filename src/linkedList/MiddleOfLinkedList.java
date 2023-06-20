@@ -10,7 +10,7 @@ package linkedList;
 public class MiddleOfLinkedList {
     public static void main(String[] args) {
         ListNode l1 = LinkedListOperations.createLinkedList();
-//        System.out.println(naiveApproach(l1));
+        System.out.println(naiveApproach(l1));
         System.out.println(betterApproach(l1));
     }
 

@@ -1,4 +1,5 @@
 package linkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class LinkedListOperations {
@@ -69,6 +70,33 @@ public class LinkedListOperations {
                 count++;
             }
             return count;
+        }
+    }
+
+    public static ListNode createCyclicLinkedList() {
+        ListNode temp = null;
+
+        ListNode a = new ListNode(10, null);
+        ListNode b = new ListNode(15, null);
+        ListNode c = new ListNode(5, null);
+        ListNode d = new ListNode(20, null);
+        temp = a;
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = c;
+
+        // 10 -> 15 -> 5 -> -> 20 -> 5
+        return temp;
+    }
+
+    public static void printCyclicLinkedList(ListNode head) {
+        ListNode temp = head;
+        int i = 0;
+        while (i < 5) {
+            System.out.print(temp.val + "->");
+            temp = temp.next;
+            i++;
         }
     }
 

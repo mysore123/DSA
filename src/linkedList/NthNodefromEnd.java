@@ -11,7 +11,6 @@ public class NthNodefromEnd {
     }
 
     private static int findNthNodeFromEnd(ListNode l1, int n) {
-        System.out.println("Size" + LinkedListOperations.size(l1));
         if (n > LinkedListOperations.size(l1)) return -1;
         ListNode slow = l1;
         ListNode fast = l1;
