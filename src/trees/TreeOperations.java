@@ -8,7 +8,7 @@ public class TreeOperations {
         printLevelOrderTraversalOfTree(root);
     }
 
-    private static void printLevelOrderTraversalOfTree(TreeNode root) {
+    public static void printLevelOrderTraversalOfTree(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
@@ -27,10 +27,11 @@ public class TreeOperations {
         TreeNode root = new TreeNode(3);
         TreeNode left  = new TreeNode();
         root.setLeft(left, 1);
+        left.setLeft(new TreeNode(), 10);
         TreeNode right  = new TreeNode();
         root.setRight(right, 2);
-        right.setRight(new TreeNode(), 2);
-        right.setLeft(new TreeNode(), 1);
+        right.setRight(new TreeNode(), 4);
+        right.setLeft(new TreeNode(), 5);
         return root;
     }
 }
